@@ -1,11 +1,10 @@
 import "./test.css";
 
-function Test(props) {
+function Test() {
   return (
     <div className="hero">
       <h1>hello world</h1>
       <p>hello</p>
-      <h2>{props.num}</h2>
     </div>
   );
 }
