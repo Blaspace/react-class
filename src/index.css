@@ -22,3 +22,25 @@
   display: flex;
   gap: 80px;
 }
+
+.post-con {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.post {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding-top: 80px;
+}
+
+.post section {
+  width: 28%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}

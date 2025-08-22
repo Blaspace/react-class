@@ -1,11 +1,11 @@
-import Header from "./components/Header";
+import AllPosts from "./components/AllPost";
+import Nav from "./components/Nav";
 
 function App() {
-  const msg = "hello world";
-
   return (
     <div>
-      <Header text={msg} number={40} />
+      <Nav />
+      <AllPosts />
     </div>
   );
 }

@@ -1,9 +1,17 @@
 import Nav from "./Nav";
 import Test from "./Test";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Header(props) {
-  const [name, setName] = useState("joy");
+  //useState hook
+  const [name, setName] = useState(0);
+
+  //useEffect hook
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
 
   return (
     <div>
@@ -11,7 +19,7 @@ function Header(props) {
       <Test />
       <h1>{props.number}</h1>
       <h1>{name}</h1>
-      <button onClick={() => setName("Peter")}>Change State</button>
+      <button onClick={() => setName(name + 1)}>Change State</button>
     </div>
   );
 }
